@@ -68,7 +68,7 @@ esac
 
 #  Cloning Repository
 echo -e "${GREEN}-==Cloning Repository ...==-${NC}"
-git clone https://github.com/dreamsofcode-io/neovim-cpp.git
+git clone https://github.com/h3li0p4us3/neovim-cpp.git
 # Navigate to the cloned directory
 cd neovim-cpp
 
