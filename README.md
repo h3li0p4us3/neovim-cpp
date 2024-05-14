@@ -50,4 +50,4 @@ sed -i '/^vim.cmd("MasonInstallAll")$/d' ~/.config/nvim/init.lua
 
 ## Credits
 
-thanks to [dreamsofcode-io](https://github.com/dreamsofcode-io) for their basic setup
+thanks to [dreamsofcode-io](https://github.com/dreamsofcode-io) for their base setup
