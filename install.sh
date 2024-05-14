@@ -33,6 +33,7 @@ fi
 #  Backup Operation
 echo -e "${GREEN}-==Backup Operation==-${NC}"
 # Ask user if they want to create a backup
+echo -e "your current configuration will be removed.${NC}"
 read -p "Do you want to create a backup of your current .config/nvim directory? (yes/no) " response
 case "$response" in
  [yY][eE][sS]|[yY]) 
@@ -46,6 +47,8 @@ case "$response" in
    ;;
  *)
    echo -e "${WHITE}Skipping backup...${NC}"
+   echo -e "${WHITE}deleting current  neovim folder...${NC}"
+   rm -rf ~/.config/nvim
    ;;
 esac
 
