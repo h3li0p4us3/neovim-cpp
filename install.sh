@@ -70,7 +70,7 @@ esac
 
 #  Copying Files
 echo -e "${GREEN}-==Copying Files==-${NC}"
-rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' . ~/.config/nvim/lua/
+rsync -av cfg/* ~/.config/nvim/lua/
 
 #  Adding Command
 # Display a warning message (for MasonInstallAll)
