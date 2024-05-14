@@ -68,13 +68,6 @@ case "$response" in
      ;;
 esac
 
-
-#  Cloning Repository
-echo -e "${GREEN}-==Cloning Repository ...==-${NC}"
-git clone https://github.com/h3li0p4us3/neovim-cpp.git
-# Navigate to the cloned directory
-cd neovim-cpp
-
 #  Copying Files
 echo -e "${GREEN}-==Copying Files==-${NC}"
 rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' . ~/.config/nvim/lua/
@@ -84,10 +77,10 @@ rsync -av --exclude='README.md' --exclude='.git/' --exclude='install.sh' . ~/.co
 echo -e "${WHITE}Neovim is about to open to install needed packages, after it downloaded the packages, quit neovim with :qa command! and wait for script to do the rest.${NC}"
 
 # Ask user for confirmation
-read -p "Do you understand the instructions? (yes/no) " response
+read -p "Do you understand the instructions? (y/n) => " response
 case "$response" in
  [yY][eE][sS]|[yY]) 
-     echo -e "${GREEN}-==Adding MasonInstallAll Command==-${NC}"
+     echo -e "${GREEN}-== Adding MasonInstallAll Command ==-${NC}"
      # Append the MasonInstallAll command to the init.lua file
      echo 'vim.cmd("MasonInstallAll")' >> ~/.config/nvim/init.lua
      # Open Neovim
