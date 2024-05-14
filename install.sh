@@ -101,7 +101,25 @@ echo -e "${GREEN}-==Removing MasonInstallAll Command==-${NC}"
 # Remove the command from init.lua
 sed -i '/^vim.cmd("MasonInstallAll")$/d' ~/.config/nvim/init.lua
 
-#  Removing Directory
-echo -e "${GREEN}-==Removing unnecessary files==-${NC}"
-# Remove the cloned directory
-rm -rf ../neovim-cpp
+read -p "Do you want to install and configure Silicon for screenshots? (y/n) => " response
+case "$response" in
+ [yY][eE][sS]|[yY]) 
+   # install Silicon from pacman database (possible to install via cargo aswell for other Distros)
+   if [[ "$ID" = "arch" ]]; then
+     # ARCH LINUX PACMAN INSTALLATION 
+     sudo pacman -S noto-fonts-emoji silicon
+   else
+     # install silicon from cargo
+     cargo install silicon
+    echo -e "${GREEN}[+] ${WHITE}make sure to add cargo bin folder in your profile ${RED}(/home/$USER/.cargo/bin)${NC}"
+    echo -e "${GREEN}[+]${WHITE} make sure to install noto-fonts-emoji on your system after.${NC}"
+   fi
+   awk -i inplace '/return {/ {print; print "  {\"michaelrommel/nvim-silicon\", lazy = true, cmd = \"Silicon\", config = function() require(\"silicon\").setup({ font = \"JetBrainsMono Nerd Font=34; Noto Color Emoji=34\" }) end },"; next}1' ~/.config/nvim/lua/plugins/init.lua
+   ;;
+ *)
+   echo -e "${WHITE}Skipping Silicon Installation...${NC}"
+   ;;
+esac
+
+clear
+echo -e "${GREEN}[+]${WHITE} INSTALLATION DONE :) ${NC}"
