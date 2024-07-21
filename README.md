@@ -1,6 +1,6 @@
 # Neovim CPP
 
-[![GitHub license](https://img.shields.io/github/license/dreamsofcode-io/neovim-cpp)](https://github.com/dreamsofcode-io/neovim-cpp/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/h3li0p4us3/neovim-cpp)](https://github.com/h3li0p4us3/neovim-cpp/blob/main/LICENSE)
 
 this repository is a my personal neovim configs which i use to code in C++.
 
@@ -20,7 +20,7 @@ To install Neovim CPP, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/dreamsofcode-io/neovim-cpp.git --depth 1
+git clone https://github.com/h3li0p4us3/neovim-cpp.git --depth 1
 ```
 2. Change to the project directory:
   ```bash
@@ -50,4 +50,4 @@ sed -i '/^vim.cmd("MasonInstallAll")$/d' ~/.config/nvim/init.lua
 
 ## Credits
 
-thanks to [dreamsofcode-io](https://github.com/dreamsofcode-io) for their base setup
+thanks to [h3li0p4us3](https://github.com/h3li0p4us3) for their base setup
