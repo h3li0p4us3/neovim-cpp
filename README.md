@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/h3li0p4us3/neovim-cpp)](https://github.com/h3li0p4us3/neovim-cpp/blob/main/LICENSE)
 
-this repository is a my personal neovim configs which i use to code in C++.
+this repository is my personal neovim configs which i use to code in C++.
 
 ## Table of Contents
 
